@@ -7,6 +7,5 @@
     "start": "node src/index.js"
   },
   "author": "Aaryan",
-  "license": "ISC",
-  "dependencies": {}
+  "license": "ISC"
 }
