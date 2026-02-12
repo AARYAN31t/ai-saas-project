@@ -9,8 +9,6 @@
     "eject": "react-scripts eject"
     "build": "react-scripts build"
     "build": "next build"
-
-
-  },
+ },
   ...
 }
