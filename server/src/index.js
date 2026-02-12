@@ -50,7 +50,3 @@ app.use(errorHandler);
 app.listen(PORT, () => {
     console.log(`Server running on port ${PORT}`);
 });
-
-"scripts": {
-  "start": "node src/index.js"
-}
