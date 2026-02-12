@@ -1,8 +1,12 @@
-{
-  "name": "server",
-  "version": "1.0.0",
-  "main": "src/index.js",
-  "scripts": {
-    "start": "node src/index.js"
-  }
-}
+const express = require("express");
+const app = express();
+
+app.get("/", (req, res) => {
+  res.send("Backend is running 🚀");
+});
+
+const PORT = process.env.PORT || 5000;
+
+app.listen(PORT, () => {
+  console.log(`Server running on port ${PORT}`);
+});
