@@ -1,0 +1,53 @@
+{
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "npm: install-all",
+            "type": "shell",
+            "command": "npm run install-all",
+            "problemMatcher": [],
+            "group": "build",
+            "detail": "Install both frontend and backend dependencies"
+        },
+        {
+            "label": "npm: dev",
+            "type": "shell",
+            "command": "npm run dev",
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {
+                    "regexp": "^.*$"
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "Server running on port",
+                    "endsPattern": "Local:.*http://localhost:5173"
+                }
+            },
+            "group": {
+                "kind": "build",
+                "isDefault": true
+            },
+            "detail": "Run both server and client concurrently"
+        },
+        {
+            "label": "npm: client",
+            "type": "shell",
+            "command": "npm run client",
+            "isBackground": true,
+            "problemMatcher": {
+                "owner": "custom",
+                "pattern": {
+                    "regexp": "^.*$"
+                },
+                "background": {
+                    "activeOnStart": true,
+                    "beginsPattern": "VITE v.*Ready in",
+                    "endsPattern": "Local:.*http://localhost:5173"
+                }
+            },
+            "detail": "Run frontend client only"
+        }
+    ]
+}

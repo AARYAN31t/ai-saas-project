@@ -1,0 +1,19 @@
+{
+  "name": "promptify-ai",
+  "version": "1.0.0",
+  "description": "AI SaaS Platform",
+  "scripts": {
+    "install-all": "npm install && npm install --prefix server && npm install --prefix client",
+    "server": "npm run dev --prefix server",
+    "client": "npm run dev --prefix client",
+    "dev": "concurrently \"npm run server\" \"npm run client\"",
+    "prisma:generate": "cd server && npx prisma generate",
+    "prisma:studio": "cd server && npx prisma studio"
+  },
+  "devDependencies": {
+    "concurrently": "^8.2.2"
+  },
+  "dependencies": {
+    "@google/generative-ai": "^0.24.1"
+  }
+}

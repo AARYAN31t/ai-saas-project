@@ -1,0 +1,33 @@
+{
+    "version": "0.2.0",
+    "configurations": [
+        {
+            "type": "chrome",
+            "request": "launch",
+            "name": "Launch Chrome",
+            "url": "http://localhost:5173",
+            "webRoot": "${workspaceFolder}/client",
+            "preLaunchTask": "npm: dev"
+        },
+        {
+            "type": "node",
+            "request": "launch",
+            "name": "Backend (Express)",
+            "program": "${workspaceFolder}/server/src/index.js",
+            "cwd": "${workspaceFolder}/server",
+            "restart": true,
+            "runtimeExecutable": "nodemon",
+            "console": "integratedTerminal",
+            "envFile": "${workspaceFolder}/server/.env"
+        }
+    ],
+    "compounds": [
+        {
+            "name": "Full Stack (Chrome)",
+            "configurations": [
+                "Backend (Express)",
+                "Launch Chrome"
+            ]
+        }
+    ]
+}
